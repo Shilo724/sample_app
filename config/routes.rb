@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
+  # get / static_pages/home => static_pages#home
+  # パス
   get 'static_pages/home'
   get 'static_pages/help'
   get 'static_pages/about'
-  root "hello#index"
+
+  # 「#」の時はコントローラーの指定
+  # コントローラー#アクション
+  root 'static_pages#home'
 end
